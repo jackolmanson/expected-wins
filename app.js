@@ -35,7 +35,7 @@ angular.module('app').controller('StandingsController', ['StandingsService', '$h
             if (ctrl.league_data[j][ctrl.league_data[j].length-2] == temp[i]) {
                 num = [ctrl.league_data[j][0], ctrl.league_data[j][ctrl.league_data[j].length-2]];
                 ctrl.order.push(num);
-                ctrl.league_data[j][ctrl.league_data[j].length-2] = 0; // avoid duplicates
+                ctrl.league_data[j][ctrl.league_data[j].length-2] = -300; // avoid duplicates
                
             }}
         }
@@ -54,7 +54,7 @@ angular.module('app').controller('StandingsController', ['StandingsService', '$h
             if (ctrl.league_data[j][ctrl.league_data[j].length-1] == temp[i]) {
                 num = [ctrl.league_data[j][0], ctrl.league_data[j][ctrl.league_data[j].length-1]];
                 ctrl.luck.push(num);
-                ctrl.league_data[j][ctrl.league_data[j].length-1] = 0; // avoid duplicates
+                ctrl.league_data[j][ctrl.league_data[j].length-1] = -300; // avoid duplicates
                
             }}
         }
