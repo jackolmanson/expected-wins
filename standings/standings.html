@@ -1,0 +1,30 @@
+
+<form>
+   <p>Enter the ESPN league ID of your public league</p>
+    <input type="text" name="leagueId" ng-init="0" ng-model="$ctrl.leagueId"/>
+    <button ng-click="$ctrl.getLeague(leagueId)" type="submit" name="submit">Submit</button>
+
+</form>
+
+<div>
+    <h1>Expected Wins</h1>
+    <p>Displays the rank, the team, and the expected number of wins.</p>
+    <ol>
+        <li ng-repeat="team in $ctrl.order">{{ $ctrl.order[$index][0] }}    {{ $ctrl.order[$index][1] }} </li>
+    </ol>
+    
+    <h1>Luck Rankings</h1>
+    <p>Shows how many more wins each team has in comparison to expected wins.</p>
+    <ol>
+        <li ng-repeat="team in $ctrl.luck"> {{ $ctrl.luck[$index][0] }}     {{ $ctrl.luck[$index][1] }} </li>
+    </ol>
+</div>
+
+<p>
+
+
+
+
+
+
+</p>
